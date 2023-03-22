@@ -186,9 +186,17 @@ void List::consultarVecinos(int num) {
         Node* current=this->head;
         Node* prev= this->head;
         while(current->getData2()!=num+1){
+            if(current->getNext()== nullptr){
+                cout<<"No hay vecinos"<<endl;
+                break;
+            }
             current=current->getNext();
         }
         while(prev->getData2()!=num-1){
+            if(prev->getNext()== nullptr){
+                cout<<"No hay vecinos"<<endl;
+                break;
+            }
             prev=prev->getNext();
         }
         string texto=prev->getData1()+","+ to_string(prev->getData2())+"|"+current->getData1()+","+ to_string(current->getData2());

@@ -11,7 +11,7 @@ void lectura( List& lista){
     hotel.open("hotel.txt", ios::in);
     while (getline(hotel, line)) {                                        // sea distinto de fin de archivo
         name = line.substr(0, line.find(" "));
-        //num =stoi(line.substr(line.find(" ") + 1, line.length()),);//"se busca un substring desde la linea siguiente a nombre hasta el final de la linea
+        //num =stoi(line.substr(line.find(" ") + 1, line.length()));//"se busca un substring desde la linea siguiente a nombre hasta el final de la linea
         lista.addBottom(name, num);
     }
     hotel.close();
